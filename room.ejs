@@ -63,7 +63,7 @@
 			}
 
 			p {
-				background-color: <%= color %>;
+				background-color: <%= typeof color === "undefined"? "lightblue" : color %>;
 				margin: 50px;
 				padding: 10px;
 				text-align:center;
