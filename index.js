@@ -12,7 +12,7 @@ var jsonParser = bodyParser.json();
 app.post("/newroom", jsonParser, (req, res) => {
 	const room = req.body.room;
 	const color = req.body.color;
-	app.get("/" + room, color, (req, res) => {
+	app.get("/" + room, (req, res) => {
 		res.render(__dirname + "/room.ejs", { room: room, color: color });
 	});
 	res.send({
